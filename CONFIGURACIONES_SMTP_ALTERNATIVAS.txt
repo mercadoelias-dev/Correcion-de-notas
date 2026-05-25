@@ -1,0 +1,76 @@
+═══════════════════════════════════════════════════════════════════════════
+CONFIGURACIONES SMTP ALTERNATIVAS PARA: mercadoelias@litoral.edu.co
+═══════════════════════════════════════════════════════════════════════════
+
+Tu correo institucional puede usar diferentes servidores SMTP.
+Prueba estas configuraciones en orden hasta que una funcione:
+
+───────────────────────────────────────────────────────────────────────────
+OPCIÓN 1: Office 365 / Outlook (MÁS COMÚN PARA INSTITUCIONES)
+───────────────────────────────────────────────────────────────────────────
+'host' => 'smtp.office365.com',
+'port' => 587,
+'encryption' => 'tls',
+'username' => 'mercadoelias@litoral.edu.co',
+'password' => 'fwsvxrqqtkezulzz',
+
+───────────────────────────────────────────────────────────────────────────
+OPCIÓN 2: Google Workspace (si Litoral usa Google)
+───────────────────────────────────────────────────────────────────────────
+'host' => 'smtp.gmail.com',
+'port' => 587,
+'encryption' => 'tls',
+'username' => 'mercadoelias@litoral.edu.co',
+'password' => 'fwsvxrqqtkezulzz',
+
+───────────────────────────────────────────────────────────────────────────
+OPCIÓN 3: Servidor SMTP genérico
+───────────────────────────────────────────────────────────────────────────
+'host' => 'smtp.litoral.edu.co',
+'port' => 587,
+'encryption' => 'tls',
+'username' => 'mercadoelias@litoral.edu.co',
+'password' => 'fwsvxrqqtkezulzz',
+
+───────────────────────────────────────────────────────────────────────────
+OPCIÓN 4: Sin encriptación (solo si las anteriores fallan)
+───────────────────────────────────────────────────────────────────────────
+'host' => 'smtp.litoral.edu.co',
+'port' => 25,
+'encryption' => '',
+'auth' => false,
+'username' => '',
+'password' => '',
+
+───────────────────────────────────────────────────────────────────────────
+OPCIÓN 5: SSL en lugar de TLS
+───────────────────────────────────────────────────────────────────────────
+'host' => 'smtp.office365.com',
+'port' => 465,
+'encryption' => 'ssl',
+'username' => 'mercadoelias@litoral.edu.co',
+'password' => 'fwsvxrqqtkezulzz',
+
+═══════════════════════════════════════════════════════════════════════════
+CÓMO CAMBIAR LA CONFIGURACIÓN:
+═══════════════════════════════════════════════════════════════════════════
+
+1. Abre: src/config_email.php
+2. Busca la sección 'smtp' => [...]
+3. Reemplaza los valores con una de las opciones de arriba
+4. Guarda el archivo
+5. Prueba en: http://localhost/correccion/public/test_email.php
+
+═══════════════════════════════════════════════════════════════════════════
+NOTA IMPORTANTE:
+═══════════════════════════════════════════════════════════════════════════
+
+Si ninguna configuración funciona, contacta al departamento de TI de 
+Institución Litoral y pregunta:
+
+1. ¿Cuál es el servidor SMTP para enviar correos?
+2. ¿Qué puerto debo usar? (587, 465, 25)
+3. ¿Usa TLS o SSL?
+4. ¿Necesito habilitar algo en mi cuenta de correo?
+
+═══════════════════════════════════════════════════════════════════════════
